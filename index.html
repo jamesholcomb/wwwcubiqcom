@@ -1,23 +1,48 @@
----
-layout: default
----
+<!DOCTYPE html>
+<style>
+  .glyphicon {
+    font-size: 30px;
+  }
+  .well {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px; /* negative number 1/2 height */
+        margin-left: -100px; /* negative number 1/2 width */
+        outline: 1px solid #CCC;
+  }
+</style>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Cubiq, Inc.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-<div class="home">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <a class="btn btn-info btn-lg" href="mailto:info@cubiq.com">
+                <i class="glyphicon glyphicon-envelope"></i>
+                &nbsp;Contact Us
+            </a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  <h1 class="page-heading">Posts</h1>
+  ga('create', 'UA-42336802-1', 'cubiq.com');
+  ga('send', 'pageview');
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+</script>
+</html>
